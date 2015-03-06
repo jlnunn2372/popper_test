@@ -8,9 +8,9 @@ import static org.junit.Assert.*;
 public class ScoreControllerTest {
 
 	@Before
-	public static void setup(){
+	public static void setup() throws RuntimeException{
 		//put setup info here
-		throw new RuntimeException();
+		
 	}
 	
 }

@@ -8,25 +8,25 @@ import static org.junit.Assert.*;
 public class GifCreateTest {
 	
 	@Before
-	public static void setup(){
+	public static void setup() throws RuntimeException{
 		//put setup info here
-		throw new RuntimeException();
+		
 	}
 	
 	@Test
 	public void testGifCreate(){
 		//test if gif file is created
-		throw new RuntimeException();
+	
 	}
 	
 	@Test
 	public void testGifSaveLocation(){
 		//test to make sure gif saves to correct location
-		throw new RuntimeException();
+		
 	}
 	
 	@Test
-	public void testGifSize(){
+	public void testGifSize() throws RuntimeException{
 		//test to make sure there is something in the gif file
 		//gif should not be 0bits in size
 	}

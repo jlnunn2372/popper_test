@@ -8,16 +8,16 @@ import static org.junit.Assert.*;
 public class UtilsTest {
 
 	@Before
-	public static void setup(){
+	public static void setup() throws RuntimeException{
 		//put any setup info here
-		throw new RuntimeException();
+		
 	}
 	
 	@Test
-	public void testRandom(){
+	public void testRandom() throws RuntimeException{
 		//Test random points creation
 		//Should not receive same points over and over again
-		throw new RuntimeException();
+		
 	}
 	
 }
