@@ -1,5 +1,0 @@
-package bubblePopperTest;
-
-class GameSettingsTest {
-
-}
