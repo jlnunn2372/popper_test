@@ -13,4 +13,9 @@ public class ScoreControllerTest {
 		
 	}
 	
+	@Test
+	public void testScoreboardCreate() throws RuntimeException{
+		//test for if scoreboard is created when button to view is clicked
+	}
+	
 }

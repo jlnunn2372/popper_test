@@ -13,4 +13,14 @@ public class ScoreBoardTest {
 		
 	}
 
+	
+	@Test
+	public void testAddLastScore() throws RuntimeException{
+		//after game ends, should add new score to scoreboard
+	}
+	
+	@Test
+	public void testUpdateHighScore() throws RuntimeException{
+		//test should updating new highcore
+	}
 }
