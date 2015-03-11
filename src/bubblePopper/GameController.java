@@ -26,7 +26,7 @@ public class GameController extends Parent {
 	private Group game; //Instance of scene game node
 	private int lifePoints;  //Users life points
 	private int score; //Users Score
-	private int difficultyLvl;
+	private int difficulty;
 	
 	GameController(Group game){
 		this.game = game;
@@ -37,12 +37,16 @@ public class GameController extends Parent {
         this.score = score;
     }
 	
+	public int getScore(){
+		return score;
+	}
+	
 	public int getLifePoints(){
 		return lifePoints;
 	}
 	
-	public void setDifficultyLvl(){
-		this.difficultyLvl = difficultyLvl;
+	public void setDifficulty(){
+		this.difficulty = difficulty;
 	}
 	
 	public void decreaseLifePoints(){
@@ -52,7 +56,7 @@ public class GameController extends Parent {
 	public void gameStart(){
 		lifePoints=10;
 		score = 0;
-		difficultyLvl = 1; //Need to make this set by user with default of 1
+		difficulty = 1; //Need to make this set by user with default of 1(easy)
 	}
 
 }
