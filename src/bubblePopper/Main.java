@@ -1,20 +1,10 @@
 package bubblePopper;
 
-import javafx.animation.ScaleTransition;
-import javafx.animation.ScaleTransitionBuilder;
-import javafx.animation.Timeline;
-import javafx.application.Application;
-import javafx.scene.Scene;
+
 import javafx.scene.control.ToolBar;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
-import javafx.stage.Stage;
-import javafx.scene.Group;
-import javafx.util.Duration;
-
-
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -34,7 +24,11 @@ import java.util.Random;
 public class Main extends Application {
 
     private ArrayList<ScaleTransition> scaleTransition;
-
+    private static GameController gameController;
+    
+    public static GameController getGameController(){
+    	return gameController;
+    }
 
     public void init(Stage primaryStage) throws Exception {
         // TODO Auto-generated method stub
@@ -108,10 +102,23 @@ public class Main extends Application {
     public double getSampleHeight() { return 150; }
 
     @Override public void start(Stage primaryStage) throws Exception {
+    	/* This creates the basic window, commented out for the moment
+    	 * This works, must remove init(primaryStage) to make it work
+    	Group game = new Group();
+    	gameController = new GameController(game);
+    	primaryStage.setTitle("Bubble Popper");
+    	primaryStage.setResizable(false);
+    	primaryStage.setWidth(Configurations.MAIN_SCREEN_WIDTH + 2*Configurations.WINDOW_BOARDER);
+    	primaryStage.setHeight(Configurations.MAIN_SCREEN_HEIGHT + 2*Configurations.WINDOW_BOARDER);
+    	Scene scene = new Scene(game);
+    	primaryStage.setScene(scene);
+    	scene.setFill(Color.BLACK);
+    	*/
         init(primaryStage);
         primaryStage.show();
         play();
     }
+    
     public static void main(String[] args) { launch(args); }
 
 
