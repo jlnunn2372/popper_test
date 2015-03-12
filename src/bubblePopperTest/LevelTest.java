@@ -5,7 +5,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 
-public class BubbleTest {
+public class LevelTest {
 	
 	@Before
 	public void setup() throws RuntimeException{
