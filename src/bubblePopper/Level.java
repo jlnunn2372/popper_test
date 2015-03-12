@@ -22,11 +22,13 @@ public class Level extends Parent {
     }
 
     public void start(){
+        GifCreator.startRecording();
+
 
     }
 
     public void stop(){
-
+        GifCreator.stopRecording();
     }
 
     public void initializeLevel(){
