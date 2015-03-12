@@ -1,7 +1,5 @@
 package bubblePopper;
 
-import javafx.scene.Group;
-
 import java.io.File;
 
 /**
@@ -11,15 +9,14 @@ public class GifCreator {
     private File Gif;
     private String dir;
 
-    public GifCreator(Group recordedGroup){
+    public GifCreator(){
+    }
+
+    public static void startRecording(){
 
     }
 
-    public void startRecording(){
-
-    }
-
-    public void stopRecording(){
+    public static void stopRecording(){
 
     }
 }
