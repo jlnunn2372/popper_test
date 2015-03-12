@@ -12,5 +12,6 @@ public final class Configurations {
 	
 	//Difficulty settings
 	public static final int LIFE_POINTS=0;
+	public static final int BUBBLE_STARTING_RADIUS=0;
 
 }

@@ -21,15 +21,15 @@ import javafx.util.Duration;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class GameController extends Parent {
+public class GameController{
 	
-	private Group game; //Instance of scene game node
+	private Group root; //Instance of scene game node
 	private int lifePoints;  //Users life points
 	private int score; //Users Score
 	private int difficulty;
 	
 	GameController(Group game){
-		this.game = game;
+		this.root = root;
 	}
 	
 	
@@ -45,6 +45,10 @@ public class GameController extends Parent {
 		return lifePoints;
 	}
 	
+	public int getDifficulty(){
+		return difficulty;
+	}
+	
 	public void setDifficulty(){
 		this.difficulty = difficulty;
 	}
@@ -57,6 +61,21 @@ public class GameController extends Parent {
 		lifePoints=10;
 		score = 0;
 		difficulty = 1; //Need to make this set by user with default of 1(easy)
+		changeState(1);
 	}
+	
+	
+
+
+	public void increaseScore(){
+		
+	}
+	
+	private void changeState(int i) {
+		BorderPane border = new BorderPane();
+		//border.setCenter();
+	}
+	
+	
 
 }

@@ -1,7 +1,7 @@
 package bubblePopper;
 
 import javafx.animation.Timeline;
-import javafx.scene.Group;
+import javafx.scene.Parent;
 import javafx.scene.shape.Circle;
 
 import java.util.Stack;
@@ -9,7 +9,7 @@ import java.util.Stack;
 /**
  * Created by brian on 3/12/2015.
  */
-public class Level extends Group {
+public class Level extends Parent {
     private Stack<Circle> circles;
     private Timeline timeline;
 

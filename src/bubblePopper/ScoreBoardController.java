@@ -2,16 +2,20 @@ package bubblePopper;
 
 import javafx.scene.control.ToolBar;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.shape.Circle;
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import javafx.scene.Parent;
 import javafx.animation.ScaleTransition;
 import javafx.animation.ScaleTransitionBuilder;
 import javafx.animation.Timeline;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Node;
 import javafx.scene.paint.Color;
@@ -22,13 +26,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class ScoreBoardController extends Parent {
+public class ScoreBoardController{
 
 	private Group scoreBoard;
 	private int highScore;
 	private int score;
 	private int difficulty; //Not sure if we want this as int or a string
-	private List<Scores> allScores = new ArrayList<Scores>(); //Store all scores here
+	private ObservableList<Scores> allScores; //Store all scores here
 	
 	
 	//class to create object for allScores list
@@ -39,6 +43,8 @@ public class ScoreBoardController extends Parent {
 		Scores(int scores, int difficulty){
 			this.scores=scores;
 			this.difficulty = difficulty;
+			//Change this to set difficulty to string(easy, normal, hard) not int
+			//Case statement
 		}
 	}
 	
@@ -75,4 +81,13 @@ public class ScoreBoardController extends Parent {
 	public void addScoreToList(int score, int difficulty){
 		allScores.add(new Scores(score, difficulty));
 	}
+	
+	
+	public void handle(ActionEvent t) {
+		BorderPane border = new BorderPane();
+		GridPane grid = new GridPane();
+		Stage stage = new Stage();
+		//Scene scene = new Scene();
+    }
+	
 }
