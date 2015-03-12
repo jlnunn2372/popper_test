@@ -13,6 +13,13 @@ public class GameControllerTest {
 		
 	}
 	
+	//Some test classes for GUI will be auto-created using WindowTester
+	
+	@Test
+	public void testMainPaneCreate() throws RuntimeException{
+		//test for if scoreboard is created when button to view is clicked
+	}
+	
 	@Test
 	public void testEasyDifficultySettings() throws RuntimeException{
 		//Test if setting changed correctly based on difficulty selected
@@ -24,7 +31,6 @@ public class GameControllerTest {
 	public void testNormalDifficultySettings() throws RuntimeException{
 		//Test if setting changed correctly based on difficulty selected
 		//Settings should match those that correspond to chosen difficulty
-	
 	}
 	
 	@Test

@@ -36,12 +36,9 @@ public class Main extends Application {
     	Scene scene = new Scene(root);
     	primaryStage.setScene(scene);
     	scene.setFill(Color.BLACK);
-
     	//Button button = new Button("All Scores");
-    	
-
         primaryStage.show();
-
+       
 
     }
     
