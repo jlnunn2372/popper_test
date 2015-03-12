@@ -2,6 +2,7 @@ package bubblePopperTest;
 
 import org.junit.Before;
 import org.junit.Test;
+
 import static org.junit.Assert.*;
 
 
@@ -46,6 +47,12 @@ public class LevelTest {
 		//Test for when bubbble hits another bubble
 		//Both bubbles should pop and user loses life twice
 		
+	}
 	
+	@Test
+	public void testRandom() throws RuntimeException{
+		//Test random points creation
+		//Should not receive same points over and over again
+		
 	}
 }
