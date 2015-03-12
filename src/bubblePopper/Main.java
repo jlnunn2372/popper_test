@@ -1,6 +1,7 @@
 package bubblePopper;
 
 
+import javafx.scene.control.Button;
 import javafx.scene.control.ToolBar;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
@@ -102,22 +103,26 @@ public class Main extends Application {
     public double getSampleHeight() { return 150; }
 
     @Override public void start(Stage primaryStage) throws Exception {
-    	/* This creates the basic window, commented out for the moment
-    	 * This works, must remove init(primaryStage) to make it work
-    	Group game = new Group();
-    	gameController = new GameController(game);
+    	// This creates the basic window, commented out for the moment
+    	//This works, must remove init(primaryStage) to make it work
+    	Group root = new Group();
+    	gameController = new GameController(root);
     	primaryStage.setTitle("Bubble Popper");
     	primaryStage.setResizable(false);
     	primaryStage.setWidth(Configurations.MAIN_SCREEN_WIDTH + 2*Configurations.WINDOW_BOARDER);
     	primaryStage.setHeight(Configurations.MAIN_SCREEN_HEIGHT + 2*Configurations.WINDOW_BOARDER);
-    	Scene scene = new Scene(game);
+    	Scene scene = new Scene(root);
     	primaryStage.setScene(scene);
     	scene.setFill(Color.BLACK);
-    	*/
+    	Button button = new Button("All Scores");
+    	
         init(primaryStage);
         primaryStage.show();
         play();
     }
+    
+    
+    
     
     public static void main(String[] args) { launch(args); }
 
