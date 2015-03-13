@@ -9,7 +9,7 @@ import java.util.Stack;
 /**
  * Created by brian on 3/12/2015.
  */
-public class Level extends Parent {
+public class Level extends GameController {
     private Stack<Circle> circles;
     private Timeline timeline;
 

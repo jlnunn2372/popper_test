@@ -1,6 +1,6 @@
 package bubblePopper;
 
-public final class Configurations {
+public final class Configurations extends GameController {
 	
 	//Window Sizes
 	public static final int MAIN_SCREEN_WIDTH=700;
