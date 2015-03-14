@@ -13,5 +13,10 @@ public final class Configurations extends GameController {
 	//Difficulty settings
 	public static final int LIFE_POINTS=0;
 	public static final int BUBBLE_STARTING_RADIUS=0;
-
+	
+	
+	//Difficulty Names
+	public static final String EASY_DIFFICULTY="Easy";
+	public static final String NORMAL_DIFFICULTY="Normal";
+	public static final String HARD_DIFFICULTY="Hard";
 }
