@@ -5,6 +5,22 @@ import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+import javafx.animation.AnimationTimer;
+import javafx.animation.KeyFrame;
+import javafx.animation.KeyValue;
+import javafx.animation.Timeline;
+import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.scene.Group;
+import javafx.scene.Scene;
+import javafx.scene.effect.Lighting;
+import javafx.scene.layout.StackPane;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
+import javafx.scene.text.Text;
+import javafx.stage.Stage;
+import javafx.util.Duration;
 
 import java.util.Stack;
 
@@ -14,6 +30,7 @@ import java.util.Stack;
 public class Level extends Parent {
     private Stack<Circle> circles;
     private Timeline timeline;
+    private AnimationTimer timer;
     private static final GameController gameController = Main.getGameController();
     private Group myGroup;
 
@@ -34,10 +51,10 @@ public class Level extends Parent {
         circle.setCenterY(500);
         circle.setFill(Color.ORANGE);
     }
-
-    public void stop(){
-        GifCreator.stopRecording();
-    }
+//
+//    public void stop(){
+//        GifCreator.stopRecording();
+//    }
 
     public void populateCircles(int circleNum){
         circles = new Stack<Circle>();
@@ -59,6 +76,16 @@ public class Level extends Parent {
 
     private int calcScoreRatio(Circle myCirle){
         return 0;
+    }
+    public void play(){
+        timeline.stop();
+        timer.stop();
+    }
+
+    @Override
+    public void stop(){
+        timeline.stop();
+        timer.stop();
     }
     //    public void init(Stage primaryStage) throws Exception {
 //        // TODO Auto-generated method stub
