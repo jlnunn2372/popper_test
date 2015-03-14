@@ -23,13 +23,14 @@ import java.util.Random;
 
 public class GameController{
 	
-	private Group root; //Instance of scene game node
+	private BorderPane root; //Instance of scene game node
 	private int lifePoints;  //Users life points
 	private int score; //Users Score
 	private int difficulty;
+	private Level level;
 	
-	GameController(Group game){
-		this.root = root;
+	GameController(BorderPane game){
+		this.root = game;
 	}
 	
 	
@@ -70,9 +71,12 @@ public class GameController{
 	public void increaseScore(){
 		
 	}
-	
-	private void changeState(int i) {
-		BorderPane border = new BorderPane();
+
+	public void changeState(int i) {
+		Group myGroup = new Group();
+		root.setCenter(new Level(0));
+		//root.setCenter(myGroup);
+
 		//border.setCenter();
 	}
 	
