@@ -38,13 +38,18 @@ public class ScoreBoardController{
 	//class to create object for allScores list
 	public class Scores{
 		private int scores;
-		private int difficulty;
+		private String difficulty;
 		
 		Scores(int scores, int difficulty){
 			this.scores=scores;
-			this.difficulty = difficulty;
-			//Change this to set difficulty to string(easy, normal, hard) not int
-			//Case statement
+			switch(difficulty){
+			case 1: this.difficulty = Configurations.EASY_DIFFICULTY;
+				break;
+			case 2: this.difficulty = Configurations.NORMAL_DIFFICULTY;
+				break;
+			case 3: this.difficulty = Configurations.HARD_DIFFICULTY;
+				break;
+			}
 		}
 	}
 	
