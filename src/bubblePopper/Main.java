@@ -5,6 +5,7 @@ import javafx.animation.ScaleTransition;
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
@@ -27,7 +28,9 @@ public class Main extends Application {
     @Override public void start(Stage primaryStage) throws Exception {
     	// This creates the basic window, commented out for the moment
     	//This works, must remove init(primaryStage) to make it work
-    	Group root = new Group();
+    	BorderPane root = new BorderPane();
+        Group gameGroup = new Group();
+        root.setCenter(gameGroup);
     	gameController = new GameController(root);
     	primaryStage.setTitle("Bubble Popper");
     	primaryStage.setResizable(false);
@@ -35,10 +38,10 @@ public class Main extends Application {
     	primaryStage.setHeight(Configurations.MAIN_SCREEN_HEIGHT + 2*Configurations.WINDOW_BOARDER);
     	Scene scene = new Scene(root);
     	primaryStage.setScene(scene);
-    	scene.setFill(Color.BLACK);
+    	//scene.setFill(Color.BLACK);
     	//Button button = new Button("All Scores");
         primaryStage.show();
-       
+       gameController.changeState(1);
 
     }
     

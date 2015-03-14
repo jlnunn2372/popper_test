@@ -1,7 +1,9 @@
 package bubblePopper;
 
 import javafx.animation.Timeline;
+import javafx.scene.Group;
 import javafx.scene.Parent;
+import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 
 import java.util.Stack;
@@ -12,9 +14,14 @@ import java.util.Stack;
 public class Level extends Parent {
     private Stack<Circle> circles;
     private Timeline timeline;
+    private static final GameController gameController = Main.getGameController();
+    private Group myGroup;
 
     public Level(int Difficulty){
-
+        myGroup = new Group();
+        getChildren().add(myGroup);
+        populateCircles(100);
+        initializeLevel();
     }
 
     private void initializeLevelTimeline(){
@@ -22,17 +29,28 @@ public class Level extends Parent {
     }
 
     public void start(){
-        GifCreator.startRecording();
-
-
+        Circle circle = new Circle(25, 25, 25);
+        circle.setCenterX(500);
+        circle.setCenterY(500);
+        circle.setFill(Color.ORANGE);
     }
 
     public void stop(){
         GifCreator.stopRecording();
     }
 
-    public void initializeLevel(){
+    public void populateCircles(int circleNum){
+        circles = new Stack<Circle>();
+        for(int i = 0; i < circleNum; i++){
+            Circle myCircle = new Circle(25,25,25);
+            circles.push(myCircle);
+        }
+    }
 
+    public void initializeLevel(){
+        while(circles.size()!=0){
+            myGroup.getChildren().add(circles.pop());
+        }
     }
 
     private void incrementScore(){
