@@ -7,7 +7,8 @@ import static org.junit.Assert.*;
 public class ScoreControllerIT {
 	
 	@Test
-	public static void scoreBoardStartItTest() throws RuntimeException{
+	public static void scoreBoardStartItTest(){
+		throw new RuntimeException();
 		
 	}
 
