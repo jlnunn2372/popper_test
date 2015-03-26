@@ -1,16 +1,24 @@
 package bubblePopperTest;
 
+import bubblePopper.GameController;
+import bubblePopper.Level;
+import javafx.scene.layout.BorderPane;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertNull;
 
 public class GameControllerTest {
-	
+	private static GameController gameController;
+	BorderPane root;
+
 	@Before
-	public static void setup() {
+	public void setup() {
 		//put setup info here
-		throw new RuntimeException();
+		root = new BorderPane();
+		root.setCenter(new Level(1));
+		gameController = new GameController(root);
+
 	}
 	
 	//Some test classes for GUI will be auto-created using WindowTester
@@ -68,7 +76,10 @@ public class GameControllerTest {
 	@Test
 	public void testUserEndsGame(){
 		//test for when user ends game manually
-		throw new RuntimeException();
+
+		root.setCenter(new Level(1));
+		gameController.endGame();
+		assertNull(root.getCenter());
 	}
 
 }
