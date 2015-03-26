@@ -6,6 +6,7 @@ import javafx.scene.layout.BorderPane;
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 
 public class GameControllerTest {
@@ -25,8 +26,8 @@ public class GameControllerTest {
 	
 	@Test
 	public void testMainPaneCreate() {
-		//test for if scoreboard is created when button to view is clicked
-		throw new RuntimeException();
+		//test for if main screen created
+		assertNotNull(root);
 	}
 	
 	@Test
