@@ -37,8 +37,8 @@ import java.util.Random;
 public class ScoreBoardController{
 
 	private Group scoreBoard;
-	private int highScore;
-	private int score;
+	private int highScore = 0;
+	private int score = 0;
 	private int difficulty; //Not sure if we want this as int or a string
 	private ObservableList<Scores> allScores; //Store all scores here
 	
@@ -61,11 +61,13 @@ public class ScoreBoardController{
 		}
 	}
 	
-	ScoreBoardController(Group scoreBoard){
+	public ScoreBoardController(Group scoreBoard){
 		this.scoreBoard = scoreBoard;
 	}
 	
 	
+
+
 	//Get Methods
 	public int getHighScore(){
 		return highScore;
@@ -85,12 +87,11 @@ public class ScoreBoardController{
 		}
 	
 	
-	public int comapreScore(int newScore){
+	public void comapreScore(int newScore){
 		//setup method to compare current highScore to newScore
 		if (newScore > this.highScore){
 			this.highScore = newScore;
 		}
-		return this.highScore;
 	}
 	
 	//Adds score with difficulty setting to list
