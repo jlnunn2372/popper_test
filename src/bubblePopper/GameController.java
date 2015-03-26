@@ -1,25 +1,7 @@
 package bubblePopper;
 
-import javafx.scene.control.ToolBar;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.shape.Circle;
-import javafx.application.Application;
 import javafx.scene.Group;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
-import javafx.scene.Parent;
-import javafx.animation.ScaleTransition;
-import javafx.animation.ScaleTransitionBuilder;
-import javafx.animation.Timeline;
-import javafx.event.EventHandler;
-import javafx.scene.Node;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
-import javafx.util.Duration;
-
-import java.util.ArrayList;
-import java.util.Random;
+import javafx.scene.layout.BorderPane;
 
 public class GameController{
 	
@@ -29,7 +11,7 @@ public class GameController{
 	private int difficulty;
 	private Level level;
 	
-	GameController(BorderPane game){
+	public GameController(BorderPane game){
 		this.root = game;
 	}
 	
@@ -70,6 +52,10 @@ public class GameController{
 
 	public void increaseScore(){
 		
+	}
+
+	public void endGame(){
+		root.setCenter(null);
 	}
 
 	public void changeState(int i) {
