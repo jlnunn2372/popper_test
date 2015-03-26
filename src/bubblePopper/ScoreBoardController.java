@@ -87,7 +87,10 @@ public class ScoreBoardController{
 	
 	public int comapreScore(int newScore){
 		//setup method to compare current highScore to newScore
-		return highScore;
+		if (newScore > this.highScore){
+			this.highScore = newScore;
+		}
+		return this.highScore;
 	}
 	
 	//Adds score with difficulty setting to list
