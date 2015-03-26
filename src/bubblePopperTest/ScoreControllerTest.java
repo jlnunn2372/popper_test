@@ -2,15 +2,17 @@ package bubblePopperTest;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runners.Parameterized.Parameters;
 
 import static org.junit.Assert.*;
 
 public class ScoreControllerTest {
-
+	@Parameters
+	
+	
 	@Before
-	public static void setup() {
-		//put setup info here
-		throw new RuntimeException();
+	public void setup() {
+		
 	}
 	
 	
@@ -29,8 +31,9 @@ public class ScoreControllerTest {
 	}
 	
 	@Test
-	public void testUpdateHighScore() {
+	public void testUpdateHighScore(int newScore, int currentScore) {
 		//test should updating new highscore
+		
 		throw new RuntimeException();
 	}
 	 
