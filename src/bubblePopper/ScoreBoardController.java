@@ -97,7 +97,10 @@ public class ScoreBoardController{
 	//Adds score with difficulty setting to list
 	
 	public void addScoreToList(int score, int difficulty){
-		allScores.add(new Scores(score, difficulty));
+		if (allScores != null){
+			allScores.add(new Scores(score, difficulty));
+		}
+		
 	}
 	
 	//GridPane to display the scores in one column and difficulty in another

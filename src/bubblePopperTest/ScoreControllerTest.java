@@ -1,19 +1,35 @@
 package bubblePopperTest;
 
+import javafx.collections.ObservableList;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runners.Parameterized.Parameters;
 
 import bubblePopper.ScoreBoardController;
+import bubblePopper.ScoreBoardController.Scores;
 import static org.junit.Assert.*;
 
 public class ScoreControllerTest {
 	private static ScoreBoardController scoreBoardController;
 	
+	public class TestObject{
+		private int score;
+		private String difficulty;
+		TestObject(int score, String difficulty){
+			this.score=score;
+			this.difficulty=difficulty;
+		}
+	}
+	
+	protected ObservableList<TestObject> testScores;
+	public void addTestScores(){
+		testScores.add(new TestObject(10, "Easy"));
+	}
 	@Before
 	public void setup() {
 	scoreBoardController = new ScoreBoardController(null);
-	throw new RuntimeException();
+	
 	}
 	
 	//Some test classes for GUI will be auto-created using WindowTester
@@ -26,10 +42,9 @@ public class ScoreControllerTest {
 	
 	@Test
 	public void testAddLastScore() {
-		//after game ends, should add new score to scoreboard
-		//scoreBoardController.addScoreToList(10, 1);
-		//assertSame((10,1), ScoreBoardController.getAllScores());
-		throw new RuntimeException();
+		scoreBoardController.addScoreToList(10, 1);
+		assertEquals("Score should equal 10, difficulty 1", testScores, scoreBoardController.getAllScores() );
+		
 	}
 	
 	@Test
