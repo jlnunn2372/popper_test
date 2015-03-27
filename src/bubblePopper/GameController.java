@@ -38,6 +38,11 @@ public class GameController{
 	
 	public void decreaseLifePoints(){
 		lifePoints--;
+		
+		//If LifePOints hit zero, game is over
+		if(lifePoints==0){
+			endGame();
+		}
 	}
 	
 	public void gameStart(){
@@ -51,7 +56,7 @@ public class GameController{
 
 
 	public void increaseScore(){
-		
+		score++;
 	}
 
 	public void endGame(){
