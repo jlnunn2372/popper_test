@@ -1,4 +1,4 @@
-package bubblePopper;
+package main.java.bubblePopper;
 
 import javafx.scene.Group;
 import javafx.scene.layout.BorderPane;

@@ -1,4 +1,4 @@
-package bubblePopper;
+package main.java.bubblePopper;
 
 import java.io.File;
 

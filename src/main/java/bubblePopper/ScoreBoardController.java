@@ -1,4 +1,4 @@
-package bubblePopper;
+package main.java.bubblePopper;
 
 import javafx.scene.control.Label;
 import javafx.scene.control.ToolBar;

@@ -1,4 +1,4 @@
-package bubblePopperTest;
+package test.java.bubblePopperTest;
 
 import javafx.collections.ObservableList;
 
@@ -6,8 +6,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runners.Parameterized.Parameters;
 
-import bubblePopper.ScoreBoardController;
-import bubblePopper.ScoreBoardController.Scores;
+import main.java.bubblePopper.ScoreBoardController;
+import main.java.bubblePopper.ScoreBoardController.Scores;
 import static org.junit.Assert.*;
 
 public class ScoreControllerTest {

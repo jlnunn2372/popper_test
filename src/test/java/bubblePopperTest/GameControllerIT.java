@@ -1,4 +1,4 @@
-package bubblePopperTest;
+package test.java.bubblePopperTest;
 
 import org.junit.Test;
 

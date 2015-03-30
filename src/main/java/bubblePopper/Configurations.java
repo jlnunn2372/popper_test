@@ -1,4 +1,4 @@
-package bubblePopper;
+package main.java.bubblePopper;
 
 public final class Configurations  {
 	
